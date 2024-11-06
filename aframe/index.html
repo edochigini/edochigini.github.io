@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body style="background-color: black;">
+    <a-scene vr-mode-ui="enabled: true" gesture-detector="enabled: false" background="color: black">
+      <!-- Temporaneamente commentato il caricamento delle risorse -->
+      <!-- <a-assets>
+        <img id="line-texture" src="https://via.placeholder.com/512x512.png?text=Linee+Bianche" crossorigin="anonymous" />
+      </a-assets> -->
+
+      <!-- Sfera con linee sottili per simulare un wireframe -->
+      <a-entity geometry="primitive: sphere; radius: 5; segmentsWidth: 32; segmentsHeight: 32" material="color: white; wireframe: true" animation="property: rotation; to: 360 360 0; dur: 15000; easing: linear; loop: true">
+        <!-- La sfera wireframe mostra linee sottili bianche -->
+      </a-entity>
+
+      <!-- Impostazioni per bloccare la rotazione della scena -->
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+    </a-scene>
+  </body>
+</html>
